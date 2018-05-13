@@ -7,56 +7,6 @@ from requests.packages.urllib3.exceptions import InsecureRequestWarning
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
 
-# Get all foodpanda orders
-def get_foodpanda_orders(orders, cookie):
-
-    url = "https://www.foodpanda.sg/orders"
-
-    cookies = {
-        'cookie': cookie
-    }
-
-    resp = requests.get(url, cookies=cookies)
-
-    html = resp.content
-
-    soup = BeautifulSoup(html, 'html.parser')
-
-    order_entry = soup.findAll('li')
-
-    order_entry = list(set(order_entry))
-
-    for order in order_entry:
-        if order is not None:
-
-            order_plc_date = order.find("h4", {"class": "vendor-name"})
-
-            if order_plc_date is not None:
-                vendor = order_plc_date.getText().strip().replace("\n", "").split(",", 1)[0]
-
-                order_date = order_plc_date.find("span", {"class": "order-date"}).getText().strip()
-                order_date = datetime.datetime.strptime(order_date, "%d %b, %Y")
-            else:
-                continue
-
-            bill = order.find("div", {"class": "total"})
-
-            if bill is not None:
-                cost = bill.getText().replace(" ", "").replace("\n", "").split(':')[1]
-
-            contents = order.find("ul", {"class": "order-product-list"})
-
-            if contents is not None:
-                food = contents.getText().split("\n")
-                items = [i.strip() for i in food if i.strip()]
-
-            orders.append({'restaurant': vendor, 'date': order_date,
-                           'cost': cost, 'items': items,
-                           'service': 'foodpanda'})
-
-    return orders
-
-
 # Get all deliveroo orders
 def get_deliveroo_orders(orders):
 
@@ -112,34 +62,22 @@ def get_deliveroo_orders(orders):
                     for side in sides:
                         items.append(side.getText())
 
-            orders.append({'restaurant': vendor,
-                           'date': datetime.datetime.strptime(order_date, "%d %B %Y  %H:%M"),
-                           'cost': cost, 'items': items, 'service': 'deliveroo'})
+            orders.append({'Restaurant': vendor,
+                           'Date': datetime.datetime.strptime(order_date, "%d %B %Y  %H:%M"),
+                           'Cost': cost, 'Items': items, 'Service': 'deliveroo'})
 
     return orders
 
 
 if __name__ == "__main__":
 
-    # Store all orders from foodpanda and deliveroo
+    # Store all orders in a list
     orders = []
 
-    # List storing cookies for all users
-    cookies = ['cookies for all users']
-
-    # Get foodpanda order for all users
-    for cookie in cookies:
-        foodpanda_orders = get_foodpanda_orders(orders, cookie)
-
-    # Get deliveroo orders
-    orders = []
     deliveroo_orders = get_deliveroo_orders(orders)
 
-    # Merge all orders from foodpanda and deliveroo
-    fpanda_del_orders = foodpanda_orders + deliveroo_orders
-
     # Convert orders to pandas dataframe
-    df = pd.DataFrame(fpanda_del_orders)
+    df = pd.DataFrame(orders)
 
     # Export dataframe into csv file
-    df.to_csv("fpanda_del_orders.csv", index=False)
+    df.to_csv("deliveroo_orders.csv", index=False)
