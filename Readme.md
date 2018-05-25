@@ -3,7 +3,7 @@
 **Vizualizing all food orders placed online**
 
 
-online orders (**olo**) + **viz**ualizations = oloviz
+online orders (**olo**) + **viz**ualizations = **oloviz**
 
 
 
@@ -27,13 +27,13 @@ online orders (**olo**) + **viz**ualizations = oloviz
 ## Working
 
 
-* Go to the url of order history for website you are scraping data.
+* Go to the URL of order history for website you are scraping data.
 
 > Eg. https://www.foodpanda.sg/orders
 
 * Then, open the Network's Tab in Developer Console
 
-* Copy the request for the webpage as CURL command
+* Copy the request for the web page as CURL command
 
 * Use this [little tool](https://curl.trillworks.com/) to get the python code
 
@@ -46,7 +46,13 @@ For storing your cookies -
 
 ### get_foodpanda_olo.py
 
-In `main`, there is a list of cookies, if there are more than one users (as in my case), store cookies of all those users in a python list (separated by `,`). If there is only one user just save your cookie in that list.
+In `main`, there is a list of cookies -
+
+```python
+cookies = ['cookies for user 1', 'cookies for user 2']
+```
+
+If there are more than one users (as in my case), store cookies of all those users in a python list (separated by `,`) as shown above. If there is only one user just save your cookie in that list.
 
 
 ### get_deliveroo_olo.py
@@ -70,10 +76,11 @@ For this script, update the below code snippet in the script with your own cooki
 
 ## TODO's
 
-* Accomodate for multiple users in `get_deliveroo_olo.py` - same as foodpanda script, mantain a list of cookies.
+* Accommodate for multiple users in `get_deliveroo_olo.py` - same as foodpanda script, mantain a list of cookies.
 * Use selenium to scrape domino's orders.
 * Cleanup and make `Items Ordered` more structured so that it easy to anayze that data field.
 * Use a food database API to gather nutrition value of each meal and items.
+
 
 ## License
 
