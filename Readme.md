@@ -8,7 +8,7 @@ online orders (**olo**) + **viz**ualizations = oloviz
 
 
 
-### Scraping
+## Scraping
 
 
 * `get_foodpanda_olo.py` - Script for scraping foodpanda orders
@@ -16,7 +16,7 @@ online orders (**olo**) + **viz**ualizations = oloviz
 * `merge_all_olo.py` - Script for combining orders from foodpanda, deliveroo, ubereats and domino's
 
 
-### Dependencies
+## Dependencies
 
 * [requests](http://docs.python-requests.org/en/master/)
 * [beautifulsoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
@@ -24,7 +24,7 @@ online orders (**olo**) + **viz**ualizations = oloviz
 
 
 
-### Working
+## Working
 
 
 * Go to the url of order history for website you are scraping data.
@@ -40,7 +40,7 @@ online orders (**olo**) + **viz**ualizations = oloviz
 * Use the cookies obtained from above in your code
 
 
-### Note
+## Note
 
 For storing your cookies - 
 
@@ -68,13 +68,13 @@ For this script, update the below code snippet in the script with your own cooki
 
 
 
-# TODO's
+## TODO's
 
 * Accomodate for multiple users in `get_deliveroo_olo.py` - same as foodpanda script, mantain a list of cookies.
 * Use selenium to scrape domino's orders.
 * Cleanup and make `Items Ordered` more structured so that it easy to anayze that data field.
 * Use a food database API to gather nutrition value of each meal and items.
 
-### License
+## License
 
 MIT © [Chaitanya Gupta](https://github.com/iCHAIT)
