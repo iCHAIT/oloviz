@@ -44,6 +44,9 @@ env/
 # data files
 *.csv
 
+# Tableau
+*.twb
+
 # End of https://www.gitignore.io/api/python
 
 
