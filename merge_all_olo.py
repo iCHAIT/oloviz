@@ -18,9 +18,9 @@ dominos_orders = pd.read_csv("dominos_orders.csv", usecols=["Cost", "Date", "Ite
 # print(dominos_orders)
 
 # Important for getting correct datesbundle install
-ubereats_orders['Date'] = pd.to_datetime(ubereats_orders.Date)
+ubereats_orders['Date'] = pd.to_datetime(ubereats_orders.Date).dt.date
 
-dominos_orders['Date'] = pd.to_datetime(dominos_orders.Date)
+dominos_orders['Date'] = pd.to_datetime(dominos_orders.Date).dt.date
 
 # Append ubereats orders to foodpanda and deliveroo
 # final_orders = fpanda_del_orders.append(ubereats_orders, ignore_index=True)

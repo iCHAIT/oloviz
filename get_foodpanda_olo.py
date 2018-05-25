@@ -64,7 +64,7 @@ if __name__ == "__main__":
 
     # Store cookies for all your users in this python list
     # If only 1 user then just place cookie for that user
-    cookies = ['cookie for user 1', 'cookies for user 2']
+    cookies = ['cookies for user 1', 'cookies for user 2']
 
     # Get foodpanda order for all users
     for cookie in cookies:
