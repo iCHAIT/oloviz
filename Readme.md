@@ -3,7 +3,7 @@
 ## **Vizualizing all food orders placed online**
 
 
-online orders (**olo**) + **viz**ualizations = **oloviz**
+## online orders (**olo**) + **viz**ualizations = **oloviz**
 
 
 
