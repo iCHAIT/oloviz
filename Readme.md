@@ -6,7 +6,9 @@ online orders (<b>olo</b>) + <b>viz</b>ualizations = <b>oloviz</b>
 
 ## Vizualizing all food orders placed online
 
-In this project I have vizualized all the food orders I have placed in the last 9 months using services like foodpanda, Deliveroo, Domino's and UberEets.
+In this project I have analyzed all the food orders I have placed in the last 9 months using 
+using [foodpanda](https://www.foodpanda.sg/) :panda_face:, [Domino's](https://www.dominos.com.sg/) :pizza:, [UberEats](https://www.ubereats.com/) :car: or [Deliveroo](https://deliveroo.com.sg/) :yum:
+
 
 I have written a blog post for the detailed analysis which can be found [here](http://localhost:4000/oloviz/).
 
