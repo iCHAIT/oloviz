@@ -10,7 +10,7 @@ In this project I have analyzed all the food orders I have placed in the last 9 
 using [foodpanda](https://www.foodpanda.sg/) :panda_face:, [Domino's](https://www.dominos.com.sg/) :pizza:, [UberEats](https://www.ubereats.com/) :car: or [Deliveroo](https://deliveroo.com.sg/) :yum:
 
 
-I have written a blog post for the detailed analysis which can be found [here](http://localhost:4000/oloviz/).
+I have written a blog post for the detailed analysis which can be found [here](https://ichait.github.io/oloviz/).
 
 You can also take a look at the [Tableau Workbook for this project](https://public.tableau.com/profile/ichait#!/vizhome/oloviz/DayofWeekvsOrdersStats) that contains all the visualizations.
 
