@@ -1,14 +1,19 @@
 # oloviz
 
-## **Vizualizing all food orders placed online**
+<p align="center", style="font-size: 30px;">
+online orders (<b>olo</b>) + <b>viz</b>ualizations = <b>oloviz</b>
+</p>
+
+## Vizualizing all food orders placed online
+
+In this project I have vizualized all the food orders I have placed in the last 9 months using services like foodpanda, Deliveroo, Domino's and UberEets.
+
+I have written a blog post for the detailed analysis which can be found [here](http://localhost:4000/oloviz/).
+
+You can also take a look at the [Tableau Workbook for this project](https://public.tableau.com/profile/ichait#!/vizhome/oloviz/DayofWeekvsOrdersStats) that contains all the visualizations.
 
 
-## online orders (**olo**) + **viz**ualizations = **oloviz**
-
-
-
-
-## Scraping
+## Scraping the Data
 
 
 * `get_foodpanda_olo.py` - Script for scraping foodpanda orders
@@ -21,7 +26,6 @@
 * [requests](http://docs.python-requests.org/en/master/)
 * [beautifulsoup](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
 * [pandas](https://pandas.pydata.org/pandas-docs/stable/index.html)
-
 
 
 ## Working
