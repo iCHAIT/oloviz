@@ -1,6 +1,6 @@
 # oloviz
 
-<p align="center", style="font-size: 30px;">
+<p align="center">
 online orders (<b>olo</b>) + <b>viz</b>ualizations = <b>oloviz</b>
 </p>
 
